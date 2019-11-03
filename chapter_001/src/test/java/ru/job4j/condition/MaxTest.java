@@ -18,8 +18,8 @@ public class MaxTest {
     }
 
     @Test
-    public void when1To2equal(){
-        int result = Max.max(2,2);
+    public void when1To2equal() {
+        int result = Max.max(2, 2);
         assertThat(result, is(2));
     }
 }

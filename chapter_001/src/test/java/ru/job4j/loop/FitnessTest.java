@@ -9,7 +9,7 @@ public class FitnessTest {
     @Test
     public void whenIvanGreatNik() {
         Fitness fit = new Fitness();
-        int month = fit.calc(95,90);
+        int month = fit.calc(95, 90);
         assertThat(month, is(0));
     }
 

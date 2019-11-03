@@ -18,7 +18,7 @@ public class Converter {
         return value * 60;
     }
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         int euro = rubleToEuro(140);
         System.out.println("140 rubles are " + euro + " euro.");
         int dollar = rubleToDollar(180);

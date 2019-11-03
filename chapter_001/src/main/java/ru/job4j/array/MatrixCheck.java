@@ -17,8 +17,7 @@ public class MatrixCheck {
                             break;
                         }
                     }
-                }
-                else if (sign == xWin && cell == 0) {
+                } else if (sign == xWin && cell == 0) {
                     int indexWin = 1;
                     for ( ; board[row][cell + 1] == xWin; cell++) { //for () { проверить последовательность.
                         indexWin++;

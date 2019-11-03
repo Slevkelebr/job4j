@@ -15,21 +15,21 @@ public class MultiMaxTest {
     @Test
     public void whenFirstMax() {
         MultiMax check = new MultiMax();
-        int result = check.max(4, 2,3);
+        int result = check.max(4, 2, 3);
         assertThat(result, is(4));
     }
 
     @Test
     public void whenThirdMax() {
         MultiMax check = new MultiMax();
-        int result = check.max(3,2,5);
+        int result = check.max(3, 2, 5);
         assertThat(result, is(5));
     }
 
     @Test
     public void  whenEqual() {
         MultiMax check = new MultiMax();
-        int result = check.max(3,3,3);
+        int result = check.max(3, 3, 3);
         assertThat(result, is(3));
     }
 }

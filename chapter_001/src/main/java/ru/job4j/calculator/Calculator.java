@@ -31,7 +31,7 @@ public class Calculator {
      * Method main Запускает нашу программу, вызывая по очереди методы имитирующие операции сложения, вычетания, умножения и деления.
      * @param args Массив строк.
      */
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         add(1, 1);
         div(4, 2);
         multiply(2, 1);
