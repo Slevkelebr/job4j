@@ -1,6 +1,17 @@
 package ru.job4j.loop;
 
+/**
+ * Класс рисует крест в консоле.
+ * @author Slevkelebr.
+ * @since 10.2019
+ */
+
 public class Slash {
+
+    /**
+     * Метод по заданному размеру рисует крест в консоле.
+     * @param size размер креста.
+     */
     public static void draw(int size) {
         for (int row = 0; row < size; row++) {
             for (int cell = 0; cell < size; cell++) {
@@ -19,6 +30,10 @@ public class Slash {
         System.out.println();
     }
 
+    /**
+     * Метод является точкой входа в программу и выводит на консоль кресты заданного размера.
+     * @param args массив строк.
+     */
     public static void main(String[] args) {
         System.out.println("Draw by 3");
         draw(3);
