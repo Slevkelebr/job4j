@@ -1,6 +1,18 @@
 package ru.job4j.array;
 
+/**
+ * Класс проверяет выигрышная ли ситуация в игре Сокобан.
+ * @author Slevkelebr.
+ * @since 11.2019.
+ * @version 1.
+ */
+
 public class MatrixCheck {
+    /**
+     * Метод проверяет полученный массив символов на соответствие выигрышной комбинации.
+     * @param board массив комбинации.
+     * @return комбинация выигрышная или нет.
+     */
     public static boolean isWin(char[][] board) {
         boolean result = false;
         for (int row = 0; row < board.length; row++) {

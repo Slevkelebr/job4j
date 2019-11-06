@@ -1,6 +1,18 @@
 package ru.job4j.array;
 
+/**
+ * Класс перемещяет заполненные ячеейки массива в начало, а пустые в конец.
+ * @author Slevkelebr.
+ * @since 11.2019.
+ * @version 1.
+ */
+
 public class Defragment {
+    /**
+     * Метод получает массив строк и перемещяет пустые элементы в конец массива, а заполненные в начало.
+     * @param array входящий массив строк.
+     * @return дефрагментированный массив.
+     */
     public static String[] compress(String[] array) {
         for (int index = 0; index < array.length; index++) {
             String cell = array[index];
