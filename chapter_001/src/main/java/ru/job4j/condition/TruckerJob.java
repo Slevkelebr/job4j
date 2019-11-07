@@ -1,6 +1,17 @@
 package ru.job4j.condition;
 
+/**
+ * Класс поверяет на коком траспорте может водитель передвигаться, в зависимости от наличии котегории прав.
+ * @author Slevkelebr.
+ * @since 10.2019
+ */
+
 public class TruckerJob {
+
+    /**
+     * Метод проверяет наличие у вадителя категории прав и траспорт на котором ом может преедвигаться.
+     * @param args массива строк.
+     */
     public static void main(String[] args) {
         Driver steve = new Driver();
         System.out.println("Steve wants the trucker job.");
