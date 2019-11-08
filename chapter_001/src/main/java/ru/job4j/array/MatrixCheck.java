@@ -22,7 +22,7 @@ public class MatrixCheck {
                 char xWin = 'X';
                 if (sign == xWin && row == 0) {
                     int indexWin = 1;
-                    for ( ; board[row + 1][cell] == xWin; row++) { //for () { проверить последовательность.
+                    for ( ; board[row + 1][cell] == xWin; row++) {
                         indexWin++;
                         if (indexWin == board.length) {
                             result = true;
@@ -31,7 +31,7 @@ public class MatrixCheck {
                     }
                 } else if (sign == xWin && cell == 0) {
                     int indexWin = 1;
-                    for ( ; board[row][cell + 1] == xWin; cell++) { //for () { проверить последовательность.
+                    for ( ; board[row][cell + 1] == xWin; cell++) {
                         indexWin++;
                         if (indexWin == board.length) {
                             result = true;

@@ -14,12 +14,12 @@ public class DummyBot {
      * @return ответ бота.
      */
     public static String answer(String question) {
-        String rsl = "Это ставит меня в тупик. Задайте другой вопрос.";
+        String answer = "Это ставит меня в тупик. Задайте другой вопрос.";
         if ("Привет, Бот.".equals(question)) {
-                rsl = "Привет, умник.";
+                answer = "Привет, умник.";
         } else if ("Пока.".equals(question)) {
-            rsl = "До скорой встречи.";
+            answer = "До скорой встречи.";
         }
-        return rsl;
+        return answer;
     }
 }

@@ -15,10 +15,10 @@ public class SqArea {
      * @return площадь прямоугольника.
      */
     public static int square(int p, int k) {
-        int h = p / (2 * (k + 1));
-        int w = k * h;
-        int s = w * h;
-        return s;
+        int height = p / (2 * (k + 1));
+        int width = k * height;
+        int area = width * height;
+        return area;
     }
 
     public static void main(String[] args) {

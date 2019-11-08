@@ -16,16 +16,16 @@ public class ArrayChar {
      */
     public static boolean startWith(char[] word, char[] pref) {
         boolean result = false;
-        int k = 0;
-        int i = 0;
-        for ( ; i < pref.length; i++) {
-            if (word[i] == pref[i]) {
-                k++;
+        int indexPref = 0;
+        int index = 0;
+        for (; index < pref.length; index++) {
+            if (word[index] == pref[index]) {
+                indexPref++;
             } else {
                 result = false;
             }
 
-            if (k == pref.length) {
+            if (indexPref == pref.length) {
                 result = true;
             }
         }

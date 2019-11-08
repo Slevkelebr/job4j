@@ -14,11 +14,11 @@ public class Turn {
      * @return перевернутый массив задом наперёд.
      */
     public int[] back(int[] array) {
-        for (int i = 0; i < array.length - i; i++) {
-            if (i != array.length - i - 1) {
-                int temp = array[i];
-                array[i] = array[array.length - i - 1];
-                array[array.length - i - 1] = temp;
+        for (int counter = 0; counter < array.length - counter; counter++) {
+            if (counter != array.length - counter - 1) {
+                int temp = array[counter];
+                array[counter] = array[array.length - counter - 1];
+                array[array.length - counter - 1] = temp;
             }
         }
         return array;
