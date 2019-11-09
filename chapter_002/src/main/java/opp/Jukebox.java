@@ -3,7 +3,7 @@ package opp;
 public class Jukebox {
 
     public void music(int position) {
-        if (position == 1 | position == 2) {
+        if (position == 1 || position == 2) {
             if (position == 1) {
                 System.out.println("Пусть бугут неуклюже.");
             } else {
