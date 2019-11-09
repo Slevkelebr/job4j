@@ -1,8 +1,33 @@
 package opp;
 
 public class Cat {
+
+    private String food;
+    private String name;
+
+    void giveNick(String name) {
+        this.name = name;
+    }
+
+    void show() {
+        System.out.println(this.name);
+        System.out.println(this.food);
+    }
+
+    void eat(String meat) {
+        this.food = meat;
+    }
+
     public static void main(String[] args) {
-        Cat pappy = new Cat();
-        Cat sparky = new Cat();
+        System.out.println("There are gav's food.");
+        Cat gav = new Cat();
+        gav.giveNick("Gav");
+        gav.eat("kotleta");
+        gav.show();
+        System.out.println("There are black's food.");
+        Cat black = new Cat();
+        black.giveNick("Black");
+        black.eat("fish");
+        black.show();
     }
 }
