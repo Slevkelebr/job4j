@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class Story создаёт три объекта истории и вызывает

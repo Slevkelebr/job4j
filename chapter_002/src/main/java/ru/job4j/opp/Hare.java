@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class Hare заяц в истории с методом пытающимся съесть колобка.

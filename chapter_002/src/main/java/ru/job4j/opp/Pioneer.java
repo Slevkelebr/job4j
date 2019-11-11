@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class Pioneer экземпляр пионера с мотодом убить волка.

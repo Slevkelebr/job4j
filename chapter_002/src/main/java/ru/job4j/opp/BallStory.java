@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class BallStory рассказывает историю колобка, создаёт экземпляры классов

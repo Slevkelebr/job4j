@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class Girl экземпляр девушки с методом звать на помощь.

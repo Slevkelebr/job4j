@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class Wolf экземпляр волка участвующий в двух историях,

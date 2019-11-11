@@ -1,4 +1,4 @@
-package opp;
+package ru.job4j.opp;
 
 /**
  * Class Fox лиса в истории с методом пытающимся съесть колобка.
