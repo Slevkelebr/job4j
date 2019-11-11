@@ -8,20 +8,29 @@ package ru.job4j.condition;
 
 public class TrgArea {
 
-    /**
-     * Метод вычисялет площадь треугольника.
-     * @param a сторона треугольника.
-     * @param b сторона треугольника.
-     * @param c сторона треугольника.
-     * @return площадь треугольника.
-     */
-    public static double area(double a, double b, double c) {
-        double perimeter = (a + b + c) / 2;
-        return Math.sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c));
+    private Point first;
+    private Point second;
+    private Point third;
+
+    public TrgArea(Point ab, Point ac, Point bc) {
+        this.first = ab;
+        this.second = ac;
+        this.third = bc;
     }
 
-    public static void main(String[] args) {
-        double rs1 = area(2, 2, 2);
-        System.out.println("area (2, 2, 2) = " + rs1);
+    public double area() {
+        double rsl = -1;
+        double a = first.distance(second);
+        double b = first.distance(third);
+        double c = second.distance(third);
+        if (this.exist(a, b, c)) {
+            double perimeter = (a + b + c) / 2;
+            rsl = Math.sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c));
+        }
+        return rsl;
+    }
+
+    private boolean exist(double a, double c, double b) {
+        return (a + b > c && b + c > a && a + b > c);
     }
 }
