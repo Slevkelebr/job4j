@@ -14,8 +14,8 @@ public class Jar {
     }
 
     public void pour(Jar another) {
-       this.value = (this.value + another.value) / 2;
-       another.value = this.value;
+       this.value = this.value + another.value;
+       another.value = 0;
     }
 
     public static void main(String[] args) {
