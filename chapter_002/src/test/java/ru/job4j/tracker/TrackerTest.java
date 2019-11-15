@@ -44,8 +44,9 @@ public class TrackerTest {
         tracker.add(third);
         // Удаляем завку.
         tracker.delete(second.getId());
+        Item[] expected = new Item[] {first, third};
         // Проверяем, что заявки нет.
-        Assert.assertNull(null, tracker.findById(second.getId()));
+       assertThat(tracker.findAll(), is(expected));
     }
 
     @Test
@@ -74,5 +75,20 @@ public class TrackerTest {
         tracker.add(second);
         tracker.add(third);
         assertThat(tracker.findByName(second.getName()), is(new Item[]{second, third}));
+    }
+
+    @Test
+    public void findByIdTest() {
+        Tracker tracker = new Tracker();
+        // Создаём заявки.
+        Item first = new Item("test1");
+        Item second = new Item("test");
+        Item third = new Item("test");
+        // Добавляем в трекер инициализирую id.
+        tracker.add(first);
+        tracker.add(second);
+        tracker.add(third);
+        String out = second.getId();
+        assertThat(tracker.findById(out), is(second));
     }
 }
