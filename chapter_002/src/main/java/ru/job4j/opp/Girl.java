@@ -13,6 +13,6 @@ public class Girl {
      * Метод help хочет позвать на помощь Пионера.
      * @param pioneer входящий параметр метода является другим объектом.
      */
-    public void help(Pioneer pioneer){
+    public void help(Pioneer pioneer) {
     }
 }

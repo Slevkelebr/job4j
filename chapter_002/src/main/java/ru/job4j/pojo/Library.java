@@ -8,7 +8,7 @@ public class Library {
         Book book3 = new Book("King of Rings", 1000);
         Book book4 = new Book("Clean code", 350);
 
-        Book[] mainLibrary = new Book[]{book1, book2 , book3 , book4};
+        Book[] mainLibrary = new Book[]{book1, book2, book3, book4};
 
        for (int index = 0; index < mainLibrary.length; index++) {
            Book book = mainLibrary[index];

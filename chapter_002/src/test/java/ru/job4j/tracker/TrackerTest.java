@@ -49,7 +49,7 @@ public class TrackerTest {
     }
 
     @Test
-    public void TestFindAll() {
+    public void findAllTest() {
         Tracker tracker = new Tracker();
         // Создаём заявки.
         Item first = new Item("test1");
@@ -63,7 +63,7 @@ public class TrackerTest {
     }
 
     @Test
-    public void TestFindByName() {
+    public void findByNameTest() {
         Tracker tracker = new Tracker();
         // Создаём заявки.
         Item first = new Item("test1");
