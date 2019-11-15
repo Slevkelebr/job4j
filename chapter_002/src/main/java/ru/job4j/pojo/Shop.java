@@ -3,12 +3,14 @@ package ru.job4j.pojo;
 public class Shop {
 
     public Product[] delete(Product[] products, int index) {
+        int count = 0;
         for (int i = 0; i < products.length; i++) {
             if (i == index) {
                 products[i] = null;
+                count++;
             }
-            for (int y = 0; y < products.length; y++) {
-                products[index] = products[index + 1];
+            if (count == 1 && i < products.length - 1) {
+            products[i] = products[i + 1];
             }
         }
         return products;
@@ -57,6 +59,8 @@ public class Shop {
 
         Shop shop = new Shop();
         System.out.println("Иллюстарция работы метода delete.");
+        products[1] = new Product("Bread", 4);
+        products[2] = new Product("Egg", 19);
         System.out.println("Вывести массив до использования метода delete.");
         for (int i = 0; i < products.length; i++) {
             Product product = products[i];
