@@ -4,26 +4,22 @@ public class StartUI {
 
     public static void createItem(Input input, Tracker tracker) {
         System.out.println("=== Create a new Item ===");
-        System.out.println("Enter name: ");
-        String name = input.askStr("");
+        String name = input.askStr("Enter name: ");
         Item item = new Item(name);
         tracker.add(item);
     }
 
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== You can edit an item ===");
-        System.out.println("Enter name: ");
-        String name = input.askStr("");
+        String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        System.out.println("Enter id: ");
-        String id = input.askStr("");
+        String id = input.askStr("Enter id: ");
         boolean answer = tracker.replace(id, item);
         System.out.println("Item changed: " + answer);
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
-        System.out.println("Enter id: ");
-        String id = input.askStr("");
+        String id = input.askStr("Enter id: ");
         boolean answer = tracker.delete(id);
         System.out.println("Item deleted: " + answer);
     }
@@ -38,16 +34,14 @@ public class StartUI {
     }
 
     public static void findByIdItem(Input input, Tracker tracker) {
-        System.out.println("Enter id: ");
-        String id = input.askStr("");
+        String id = input.askStr("Enter id: ");
         Item items = tracker.findById(id);
         System.out.print("Item changed: ");
         System.out.println(items.getName());
     }
 
     public static void findByNameItem(Input input, Tracker tracker) {
-        System.out.println("Enter name: ");
-        String name = input.askStr("");
+        String name = input.askStr("Enter name: ");
         Item[] items = tracker.findByName(name);
         for (int i = 0; i < items.length; i++) {
             System.out.print(items[i].getName() + " ");
@@ -59,8 +53,7 @@ public class StartUI {
         boolean run = true;
         while (run) {
             this.showMenu();
-            System.out.println("Select: ");
-            int select = Integer.valueOf(input.askStr(""));
+            int select = Integer.valueOf(input.askStr("Select: "));
             if (select == 0) {
                 StartUI.createItem(input, tracker);
             } else if (select == 1) {
