@@ -1,6 +1,6 @@
 package ru.job4j.opp;
 
-public class Student {
+public class Student extends Object {
 
     public void music() {
         System.out.println("Tra tra tra");
