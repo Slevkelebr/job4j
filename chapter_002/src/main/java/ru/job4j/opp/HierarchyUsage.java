@@ -7,14 +7,14 @@ public class HierarchyUsage {
         // делаем приведение к типу родителя Transport.
         Transport tp = car;
         // делаем приведение к типу родителя Object.
-        Object obj = car;
+        java.lang.Object obj = car;
         // приведение типа при создании объекта.
-        Object ocar = new Car();
+        java.lang.Object ocar = new Car();
         // приведение типа за счет повышения по иерархии.
         Car carFromObject = (Car) ocar;
 
         // оибка в приведении типа.
-        Object bicycle = new Bicycle();
+        java.lang.Object bicycle = new Bicycle();
         System.out.println(new Car());
         System.out.println(new Bicycle());
         System.out.println(new Object());
