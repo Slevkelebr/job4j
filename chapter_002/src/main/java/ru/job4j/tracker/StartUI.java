@@ -11,9 +11,10 @@ public class StartUI {
 
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== You can edit an item ===");
-        String name = input.askStr("Enter name: ");
-        Item item = new Item(name);
         String id = input.askStr("Enter id: ");
+        String name = input.askStr("Enter new name: ");
+        Item item = new Item(name);
+        item.setId(id);
         boolean answer = tracker.replace(id, item);
         System.out.println("Item changed: " + answer);
     }
