@@ -3,6 +3,12 @@ package ru.job4j.tracker;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Класс создан, для тестирования работы Трекера, имитирую пользовательский ввод через консоль.
+ * @author Sergey Frolov.(Slevkelebr107@gmail.com).
+ * @since 11.2019
+ */
+
 public class Tracker {
     /**
      * Массив для хранения заявок.
