@@ -12,7 +12,8 @@ public class CreateAction implements UserAction {
         System.out.println("=== Create a new Item ===");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        System.out.println(tracker.add(item));
+        Item answer = tracker.add(item);
+        System.out.println("Item successfully added: " + answer.getName());
         return true;
     }
 }
