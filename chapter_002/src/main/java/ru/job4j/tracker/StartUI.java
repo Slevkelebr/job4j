@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import java.nio.charset.IllegalCharsetNameException;
-
 /**
  * Класс создан, для тестирования работы Трекера, имитирую пользовательский ввод через консоль.
  * @author Sergey Frolov.(Slevkelebr107@gmail.com).
@@ -31,7 +29,7 @@ public class StartUI {
     private void showMenu(UserAction[] actions) {
         System.out.println("Menu.");
         for (int index = 0; index < actions.length; index++) {
-            System.out.println(index + ". " + actions[index].name());
+            System.out.println(actions[index].name());
         }
     }
 
@@ -39,7 +37,7 @@ public class StartUI {
         Input input = new ConsoleInput();
         Input validate = new ValidateInput(input);
         Tracker tracker = new Tracker();
-        UserAction[] actions = {new CreateAction(), new ReplaceAction(), new DeleteAction(), new FindAllItemAction(), new FindByIdItemAction(), new FindByNameItemAction(), new ExitAction()};
+        UserAction[] actions = {new CreateAction(0, "Add new item"), new ReplaceAction(1, "Edit item"), new DeleteAction(2, "Delete item"), new FindAllItemAction(3, "Show all items"), new FindByIdItemAction(4, "Find item by id"), new FindByNameItemAction(5, "Find items by name"), new ExitAction(6, "Exit from the program.")};
         new StartUI().init(validate, tracker, actions);
     }
 }

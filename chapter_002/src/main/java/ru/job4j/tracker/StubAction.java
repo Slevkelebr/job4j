@@ -5,16 +5,20 @@ package ru.job4j.tracker;
  * @author Sergey Frolov.(Slevkelebr107@gmail.com).
  * @since 24.11.2019
  */
-public class StubAction implements UserAction {
+public class StubAction extends BaseAction {
     /**
      * Проверям выбрали ли пункт меню или нет.
      */
     private boolean call = false;
 
-    @Override
+    protected StubAction(int key, String name) {
+        super(key, name);
+    }
+
+/*    @Override
     public String name() {
         return "Stub action";
-    }
+    }*/
 
     @Override
     public boolean execute(Input input, Tracker tracker) {

@@ -19,7 +19,7 @@ public class FindAllItemActionTest {
         Tracker tracker = new Tracker();
         Item item = new Item("fix bug");
         tracker.add(item);
-        FindAllItemAction act = new FindAllItemAction();
+        FindAllItemAction act = new FindAllItemAction(3, "Show all items");
         act.execute(new StubInput(new String[] {}), tracker);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("Currently there are the following items: ")
