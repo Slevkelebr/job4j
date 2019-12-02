@@ -5,11 +5,6 @@ public class DeleteAction extends BaseAction {
     protected DeleteAction(int key, String name) {
         super(key, name);
     }
-/*
-    @Override
-    public String name() {
-        return "Delete item";
-    }*/
 
     @Override
     public boolean execute(Input input, Tracker tracker) {

@@ -15,11 +15,6 @@ public class StubAction extends BaseAction {
         super(key, name);
     }
 
-/*    @Override
-    public String name() {
-        return "Stub action";
-    }*/
-
     @Override
     public boolean execute(Input input, Tracker tracker) {
         call = true;

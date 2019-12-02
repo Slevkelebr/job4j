@@ -6,11 +6,6 @@ public class FindAllItemAction extends BaseAction {
         super(key, name);
     }
 
-   /* @Override
-    public String name() {
-        return "Show all items";
-    }*/
-
     @Override
     public boolean execute(Input input, Tracker tracker) {
         System.out.println("Currently there are the following items: ");

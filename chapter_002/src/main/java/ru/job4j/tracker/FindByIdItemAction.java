@@ -6,11 +6,6 @@ public class FindByIdItemAction extends BaseAction {
         super(key, name);
     }
 
-  /*  @Override
-    public String name() {
-        return "Find item by id";
-    }*/
-
     @Override
     public boolean execute(Input input, Tracker tracker) {
         String id = input.askStr("Enter id: ");

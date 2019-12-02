@@ -6,11 +6,6 @@ public class ReplaceAction extends BaseAction {
         super(key, name);
     }
 
-  /*  @Override
-    public String name() {
-        return "Edit item";
-    }*/
-
     @Override
     public boolean execute(Input input, Tracker tracker) {
         System.out.println("=== You can edit an item ===");

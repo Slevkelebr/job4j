@@ -6,11 +6,6 @@ public class CreateAction extends BaseAction {
         super(key, name);
     }
 
-  /*  @Override
-    public String name() {
-        return "Add new item";
-    }*/
-
     @Override
     public boolean execute(Input input, Tracker tracker) {
         System.out.println("=== Create a new Item ===");
