@@ -10,7 +10,7 @@ public class TrackerSecondTest {
     public void trackerSecondOnly() {
         TrackerSecond first = TrackerSecond.getInstance();
         TrackerSecond second = TrackerSecond.getInstance();
-        assertEquals(first, second);
+        assertSame(first, second);
     }
 
 }

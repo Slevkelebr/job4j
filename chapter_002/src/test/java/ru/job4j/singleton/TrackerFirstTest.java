@@ -10,7 +10,7 @@ public class TrackerFirstTest {
     public void trackerFirstOnly() {
         TrackerFirst tracker1 = TrackerFirst.INSTANCE;
         TrackerFirst tracker2 = TrackerFirst.INSTANCE;
-        assertEquals(tracker1, tracker2);
+        assertSame(tracker1, tracker2);
     }
 
 }
