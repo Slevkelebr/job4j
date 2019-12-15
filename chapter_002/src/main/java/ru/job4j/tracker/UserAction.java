@@ -6,4 +6,5 @@ public interface UserAction {
     int key();
 
     boolean execute(Input input, Tracker tracker);
+
 }

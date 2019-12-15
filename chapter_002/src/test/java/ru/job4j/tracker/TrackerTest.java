@@ -1,7 +1,10 @@
 package ru.job4j.tracker;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -44,7 +47,9 @@ public class TrackerTest {
         tracker.add(third);
         // Удаляем завку.
         tracker.delete(second.getId());
-        Item[] expected = new Item[] {first, third};
+        List<Item> expected = new ArrayList<>();
+        expected.add(first);
+        expected.add(third);
         // Проверяем, что заявки нет.
        assertThat(tracker.findAll(), is(expected));
     }
@@ -60,7 +65,11 @@ public class TrackerTest {
         tracker.add(first);
         tracker.add(second);
         tracker.add(third);
-        assertThat(tracker.findAll(), is(new Item[]{first, second, third}));
+        List<Item> expected = new ArrayList<>();
+        expected.add(first);
+        expected.add(second);
+        expected.add(third);
+        assertThat(tracker.findAll(), is(expected));
     }
 
     @Test
@@ -74,7 +83,10 @@ public class TrackerTest {
         tracker.add(first);
         tracker.add(second);
         tracker.add(third);
-        assertThat(tracker.findByName(second.getName()), is(new Item[]{second, third}));
+        List<Item> expected = new ArrayList<>();
+        expected.add(second);
+        expected.add(third);
+        assertThat(tracker.findByName(second.getName()), is(expected));
     }
 
     @Test
