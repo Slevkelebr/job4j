@@ -1,4 +1,3 @@
-/*
 package ru.job4j.tracker;
 
 import org.junit.Assert;
@@ -21,8 +20,9 @@ public class ComparatorDescendingTest {
         items.add(second);
         items.add(third);
         items.add(four);
+        items.sort(new ComparatorDescending());
         Item[] input = new Item[]{third, second, first, four};
         List<Item> expected = new ArrayList<>(Arrays.asList(input));
         Assert.assertEquals(expected, items);
     }
-}*/
+}
