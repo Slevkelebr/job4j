@@ -14,10 +14,6 @@ import java.util.Map;
 public class Bank {
     private Map<User, List<Account>> users = new HashMap<>();
 
-    public Map<User, List<Account>> getUsers() {
-        return users;
-    }
-
     /**
      * Добавляет пользователя.
      * @param user новый пользователь.
