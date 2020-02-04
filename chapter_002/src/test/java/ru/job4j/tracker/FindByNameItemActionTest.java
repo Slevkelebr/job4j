@@ -22,7 +22,7 @@ public class FindByNameItemActionTest {
         FindByNameItemAction act = new FindByNameItemAction(3, "Show all items", System.out::println);
         act.execute(new StubInput(new String[] {"Task1"}), tracker);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
-                .add(item.getName() + " " + item.getId())
+                .add("Name: " + item.getName() + " | " + "Id: " + item.getId())
                 .toString();
         assertThat(new String(out.toByteArray()), is(expect));
         System.setOut(def);
