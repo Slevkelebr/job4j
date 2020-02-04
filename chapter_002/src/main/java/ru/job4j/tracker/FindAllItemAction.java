@@ -1,20 +1,20 @@
 package ru.job4j.tracker;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class FindAllItemAction extends BaseAction {
 
-    protected FindAllItemAction(int key, String name) {
-        super(key, name);
+    protected FindAllItemAction(int key, String name, Consumer<String> output) {
+        super(key, name, output);
     }
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        System.out.println("Currently there are the following items: ");
+        output.accept("Currently there are the following items: ");
         List<Item> items = tracker.findAll();
         for (Item item : items) {
-            System.out.print(item.getName() + " ");
-            System.out.println(item.getId());
+            output.accept(String.format("Name: %s | Id: %s", item.getName(), item.getId()));
         }
         return true;
     }

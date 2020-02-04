@@ -1,9 +1,11 @@
 package ru.job4j.tracker;
 
+import java.util.function.Consumer;
+
 public class DeleteAction extends BaseAction {
 
-    protected DeleteAction(int key, String name) {
-        super(key, name);
+    protected DeleteAction(int key, String name, Consumer<String> output) {
+        super(key, name, output);
     }
 
     @Override
@@ -11,9 +13,9 @@ public class DeleteAction extends BaseAction {
         String id = input.askStr("Enter id: ");
         boolean answer = tracker.delete(id);
         if (answer) {
-            System.out.println("Item removed");
+            output.accept("Item removed");
         } else {
-            System.out.println("Invalid id specified");
+            output.accept("Invalid id specified");
         }
         return true;
     }

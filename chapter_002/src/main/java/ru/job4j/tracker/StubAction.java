@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.function.Consumer;
+
 /**
  * Класс создан для тестирования загрузки действий и проверки, что тест пройдет для метода init в StartUi.
  * @author Sergey Frolov.(Slevkelebr107@gmail.com).
@@ -11,8 +13,8 @@ public class StubAction extends BaseAction {
      */
     private boolean call = false;
 
-    protected StubAction(int key, String name) {
-        super(key, name);
+    protected StubAction(int key, String name, Consumer<String> output) {
+        super(key, name, output);
     }
 
     @Override

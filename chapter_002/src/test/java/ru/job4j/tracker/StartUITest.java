@@ -16,10 +16,11 @@ public class StartUITest {
 /*    @Test
     public void whenExit() {
         StubInput input = new StubInput(new String[] {"0"});
-        List<UserAction> action = new ArrayList<>();
-        action.add(new StubAction(0, "Stub action"));
-        new StartUI().init(input, new Tracker(), (ArrayList<UserAction>) action);
-        assertThat(action.get(0).isCall(), is(true));
+        StubAction action = new StubAction(0, "Exit");
+        List<UserAction> list = new ArrayList<>();
+        list.add(action);
+        new StartUI(input, new Tracker(), System.out::println).init(list);
+        assertThat(action.isCall(), is(true));
     }*/
 
     @Test
@@ -28,9 +29,9 @@ public class StartUITest {
         PrintStream def = System.out;
         System.setOut(new PrintStream(out));
         List<UserAction> action = new ArrayList<>();
-        action.add(new StubAction(0, "Stub action"));
+        action.add(new StubAction(0, "Stub action", System.out::println));
         StubInput input = new StubInput(new String[] {"0"});
-        new StartUI().init(input, new Tracker(), (ArrayList<UserAction>) action);
+        new StartUI(input, new Tracker(), System.out::println).init(action);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("Menu.")
                 .add("0. Stub action")
