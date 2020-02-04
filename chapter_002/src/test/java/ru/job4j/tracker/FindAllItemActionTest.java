@@ -23,7 +23,7 @@ public class FindAllItemActionTest {
         act.execute(new StubInput(new String[] {}), tracker);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add("Currently there are the following items: ")
-                .add(item.getName() + " " + item.getId())
+                .add("Name: " + item.getName() + " | " + "Id: " + item.getId())
                 .toString();
         assertThat(new String(out.toByteArray()), is(expect));
         System.setOut(def);
