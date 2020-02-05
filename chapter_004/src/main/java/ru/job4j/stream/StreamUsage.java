@@ -24,7 +24,7 @@ public class StreamUsage {
         List<Task> tasks = new ArrayList<>();
         tasks.add(new Task("Bug #1", 100L));
         tasks.add(new Task("Task #2", 100L));
-        tasks.add(new Task("Bug #3", 100L));
+        tasks.add(new Task("Bug #32", 100L));
         Long total = tasks.stream().map(task -> task.spent
         ).reduce(0L, Long::sum);
         System.out.println(total);
