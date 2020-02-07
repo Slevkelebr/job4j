@@ -10,7 +10,7 @@ public class ConvertMatrix2ListTest {
     @Test
     public void when2on2ArrayThenList4() {
         ConvertMatrix2List list = new ConvertMatrix2List();
-        int[][] input = {
+        Integer[][] input = {
                 {1, 2},
                 {3, 4}
         };
