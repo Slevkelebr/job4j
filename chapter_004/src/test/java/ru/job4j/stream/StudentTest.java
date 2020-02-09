@@ -16,10 +16,9 @@ public class StudentTest {
         CheckStudents check = new CheckStudents();
         Student sergey = new Student("Sergey", 5);
         Student petr = new Student("Petr", 3);
-        List<Student> students = Arrays.asList(sergey, null, petr, null);
+        List<Student> students = Arrays.asList(petr, null, sergey, null);
         List<Student> result = check.levelOf(students, 4);
         List<Student> expected = Collections.singletonList(sergey);
         Assert.assertThat(result, is(expected));
     }
-
 }

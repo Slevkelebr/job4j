@@ -1,9 +1,5 @@
 package ru.job4j.stream;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class Student implements Comparable<Student> {
 
     private String name;
@@ -32,6 +28,6 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        return scope.compareTo(o.getScope());
+        return Integer.compare(o.scope, this.getScope());
     }
 }
