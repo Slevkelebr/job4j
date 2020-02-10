@@ -17,7 +17,7 @@ public class UserTest {
                 new User("Ivan", 31)
         );
         Iterator<User> it = users.iterator();
-
+        assertThat(it.next(), is(new User("Ivan", 31)));
         assertThat(it.next(), is(new User("Petr", 32)));
     }
 
