@@ -15,15 +15,15 @@ public class SchoolTest {
     public void whenStudentScopeMore70() {
         School school = new School();
         List<Student> students = Arrays.asList(
-                new Student(65),
-                new Student(75),
-                new Student(80)
+                new Student(65, "petr"),
+                new Student(75, "petr"),
+                new Student(80, "petr")
         );
         List<Student> result = school.collect(students,
                 student -> student.getScore() > 70 & student.getScore() < 100);
         List<Student> expected = Arrays.asList(
-                new Student(75),
-                new Student(80)
+                new Student(75, "petr"),
+                new Student(80, "petr")
         );
         assertThat(result.size(), is(2));
     }
@@ -32,13 +32,13 @@ public class SchoolTest {
     public void whenStudentScopeMore50Less70() {
         School school = new School();
         List<Student> students = Arrays.asList(
-                new Student(65),
-                new Student(75),
-                new Student(80)
+                new Student(65, "petr"),
+                new Student(75, "petr"),
+                new Student(80, "petr")
         );
         List<Student> result = school.collect(students,
                 student -> student.getScore() > 50 & student.getScore() < 70);
-        List<Student> expected = Arrays.asList(new Student(65));
+        List<Student> expected = Arrays.asList(new Student(65, "petr"));
         assertThat(result.size(), is(1));
     }
 
@@ -46,9 +46,9 @@ public class SchoolTest {
     public void whenStudentScopeMore0Less50() {
         School school = new School();
         List<Student> students = Arrays.asList(
-                new Student(65),
-                new Student(75),
-                new Student(80)
+                new Student(65, "petr"),
+                new Student(75, "petr"),
+                new Student(80, "petr")
         );
         List<Student> result = school.collect(students,
                 student -> student.getScore() > 0 & student.getScore() < 50);
