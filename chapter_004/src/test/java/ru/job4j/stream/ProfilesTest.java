@@ -15,9 +15,9 @@ public class ProfilesTest {
         Address address = new Address("Moscow", "Gagarina", 23, 10);
         List<Profile> profile = Arrays.asList(new Profile(address));
         Profiles profiles = new Profiles();
-        List<String> result = profiles.collect(profile);
-        List<String> expected = Arrays.asList(new String("Address{" + "city='Moscow" + '\'' + ", street='Gagarina" + '\'' + ", home=23" + ", apartment=10" + '}'));
-        assertThat(result, is(expected));
+        List<Address> result = profiles.collect(profile);
+        List<Address> expected = Arrays.asList(new Address("Moscow", "Gagarina", 23, 10));
+        assertThat(result.get(0).getCity(), is(expected.get(0).getCity()));
     }
 
 }

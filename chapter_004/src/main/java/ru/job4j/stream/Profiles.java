@@ -4,12 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Profiles {
-    public List<String> collect(List<Profile> profiles) {
+    public List<Address> collect(List<Profile> profiles) {
         return profiles.stream().map(
-                address -> {
-                    String result = address.getAddress().toString();
-                    return result;
-                }
+                profile -> profile.getAddress()
         ).collect(Collectors.toList());
     }
 }
