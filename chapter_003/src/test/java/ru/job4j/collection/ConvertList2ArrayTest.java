@@ -35,13 +35,7 @@ public class ConvertList2ArrayTest {
         list2.add(new int[]{1, 2});
         list2.add(new int[]{3, 4, 5, 6});
         List<Integer> result = list.convert(list2);
-        List<Integer> expected = new ArrayList<>();
-        expected.add(1);
-        expected.add(2);
-        expected.add(3);
-        expected.add(4);
-        expected.add(5);
-        expected.add(6);
+        List<Integer> expected = List.of(1, 2, 3, 4, 5, 6);
         assertArrayEquals(expected.toArray(new Integer[0]), result.toArray(new Integer[0]));
     }
 }
