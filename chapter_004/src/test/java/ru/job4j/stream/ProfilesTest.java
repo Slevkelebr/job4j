@@ -13,11 +13,12 @@ public class ProfilesTest {
     @Test
     public void allAddress() {
         Address address = new Address("Moscow", "Gagarina", 23, 10);
-        List<Profile> profile = Arrays.asList(new Profile(address));
+        Address address2 = new Address("Ufa", "Magi", 25, 11);
+        Address address3 = new Address("Moscow", "Gagarina", 23, 10);
+        List<Profile> profile = Arrays.asList(new Profile(address), new Profile(address2), new Profile(address3));
         Profiles profiles = new Profiles();
         List<Address> result = profiles.collect(profile);
-        List<Address> expected = Arrays.asList(new Address("Moscow", "Gagarina", 23, 10));
-        assertThat(result.get(0).getCity(), is(expected.get(0).getCity()));
+        assertThat(result.size(), is(2));
     }
 
 }
