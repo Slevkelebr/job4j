@@ -2,16 +2,15 @@ package ru.job4j.condition;
 
 import org.junit.Assert;
 import org.junit.Test;
+import ru.job4j.condition.distance.Point;
 
 public class PointTest {
 
     @Test
     public void distance() {
-        int x1 = 3;
-        int x2 = 2;
-        int y1 = 5;
-        int y2 = 1;
-        double result = Point.distance(x1, y1, x2, y2);
+        Point first = new Point(3, 5);
+        Point second = new Point(2, 1);
+        double result = first.distance(second);
         double expected = 4.12;
         Assert.assertEquals(expected, result, 0.01);
     }
