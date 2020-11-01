@@ -2,10 +2,7 @@
 [![codecov](https://codecov.io/gh/Slevkelebr/job4j/branch/hotfix_3/graph/badge.svg)](https://codecov.io/gh/Slevkelebr/job4j)
 # job4j
 
-Я в третий раз с начала начал проходить курс job4j.
-
-Объединение зафиксированных изменений.
-
-В курсе производилась работа с ветками git. 
-
-Учусь работать с ветками в git.
+Chapter_001. Базовый Синтаксис.
+Chapter_002. ООП.
+Chapter_003. Collections lite.
+Chapter_004. Lambda, Stream API.
