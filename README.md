@@ -1,11 +1,11 @@
 ﻿[![Build Status](https://travis-ci.org/Slevkelebr/job4j.svg?branch=hotfix_3)](https://travis-ci.org/Slevkelebr/job4j)
 [![codecov](https://codecov.io/gh/Slevkelebr/job4j/branch/hotfix_3/graph/badge.svg)](https://codecov.io/gh/Slevkelebr/job4j)
 
-#####Обучение проходит посредством выполнения задач в трекере TrackStudio на сайте https://job4j.ru/
+Обучение проходит посредством выполнения задач в трекере TrackStudio на сайте https://job4j.ru/
 
-##Уровень - Стажер.
+#Уровень - Стажер.
 
-###Задания выполненые за время прохождения блока.
+##Задания выполненые за время прохождения блока.
 
  - Введение в Java технологию.<br/>
  - Основные синтаксические элементы языка Java (идентификаторы, типы данных, преобразования типов, операторы).<br/>
