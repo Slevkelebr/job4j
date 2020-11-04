@@ -1,4 +1,4 @@
-﻿[![Build Status](https://travis-ci.org/Slevkelebr/job4j.svg?branch=hotfix_3)](https://travis-ci.org/Slevkelebr/job4j)
+﻿[![Build Status](https://travis-ci.org/Slevkelebr/job4j_elementary.svg?branch=hotfix_3)](https://travis-ci.org/Slevkelebr/job4j_elementary)
 [![codecov](https://codecov.io/gh/Slevkelebr/job4j/branch/hotfix_3/graph/badge.svg)](https://codecov.io/gh/Slevkelebr/job4j)
 
 ***Обучение проходит посредством выполнения задач в трекере TrackStudio на сайте https://job4j.ru/***
